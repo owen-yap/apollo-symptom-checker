@@ -48,7 +48,7 @@ export default function ClinicsScreen({ route, navigation }) {
         marginTop: 25,
       }}
     >
-      <Text style={styles.titletext}>Please select a clinic</Text>
+      <Text style={styles.titletext}>Please select a tutor</Text>
       <FlatList
         style={styles.container}
         data={route.params.filter.sort((x, y) => x.crowd - y.crowd)}
@@ -63,7 +63,7 @@ export default function ClinicsScreen({ route, navigation }) {
         }}
       >
         <Text style={{ textAlign: "center", fontSize: 20, color: "#eb637a" }}>
-          Select Clinic
+          Select Tutor
         </Text>
       </TouchableOpacity>
     </View>
