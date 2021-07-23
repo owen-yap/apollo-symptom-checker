@@ -120,7 +120,7 @@ function HomeScreen({ navigation }) {
             });
         }}
       >
-        <Text style={{ textAlign: "center", fontSize: 20, color: "#eb637a" }}>
+        <Text style={{ textAlign: "center", fontSize: 20, color: "#69A6D1" }}>
           Find Tutors
         </Text>
       </TouchableOpacity>

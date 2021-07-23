@@ -24,7 +24,7 @@ export default function ClinicsScreen({ route, navigation }) {
   const [selectedName, setSelectedName] = useState(null);
 
   const renderItem = ({ item }) => {
-    const backgroundColor = item.id === selectedId ? "#ffc1e3" : "#ffffff";
+    const backgroundColor = item.id === selectedId ? "#AAE5FC" : "#ffffff";
 
     return (
       <Item
@@ -62,7 +62,7 @@ export default function ClinicsScreen({ route, navigation }) {
           navigation.navigate("TriageScreen", { selectedName });
         }}
       >
-        <Text style={{ textAlign: "center", fontSize: 20, color: "#eb637a" }}>
+        <Text style={{ textAlign: "center", fontSize: 20, color: "#69A6D1" }}>
           Select Tutor
         </Text>
       </TouchableOpacity>

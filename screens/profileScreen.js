@@ -133,7 +133,7 @@ function ProfileStackScreen({ route, navigation }) {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "#eb637a",
+        backgroundColor: "#69A6D1",
         marginTop: -20,
       }}
     >
@@ -170,8 +170,8 @@ export default function ProfileScreen() {
           },
           headerStyle: {
             height: 100,
-            backgroundColor: "#eb637a",
-            borderBottomColor: "#eb637a",
+            backgroundColor: "#69A6D1",
+            borderBottomColor: "#69A6D1",
             borderBottomWidth: 1,
           },
         }}
@@ -231,7 +231,7 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#eb637a",
+    backgroundColor: "#69A6D1",
     marginBottom: 5,
   },
   logo: {
