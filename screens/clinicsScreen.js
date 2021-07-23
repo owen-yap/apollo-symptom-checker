@@ -12,10 +12,10 @@ const Item = ({ item, onPress, backgroundColor }) => (
   <TouchableOpacity onPress={onPress} style={[styles.item, backgroundColor]}>
     <Text style={[styles.title]}>{item.name}</Text>
     <Text style={{ fontStyle: "italic" }}>
-      {item.address}
+      {item.qualification}
       {"\n"}
     </Text>
-    <Text>Age: {item.crowd}</Text>
+    <Text>Age: {item.age}</Text>
   </TouchableOpacity>
 );
 
@@ -51,7 +51,7 @@ export default function ClinicsScreen({ route, navigation }) {
       <Text style={styles.titletext}>Please select a tutor</Text>
       <FlatList
         style={styles.container}
-        data={route.params.filter.sort((x, y) => x.crowd - y.crowd)}
+        data={route.params.filter.sort((x, y) => x.age - y.age)}
         renderItem={renderItem}
         keyExtractor={(item) => item.id.toString()}
         contentContainerStyle={{ justifyContent: "center" }}
