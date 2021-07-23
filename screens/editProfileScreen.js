@@ -12,16 +12,11 @@ export default function EditProfileScreen({ navigation }) {
   var newProfile = {
     name: "",
     age: "",
-    sex: "",
-    height: "",
-    weight: "",
-    dob: "",
-    blood: "",
-    smoke: "",
-    chol: "",
-    hyper: "",
-    fat: "",
-    injury: "",
+    grade: "",
+    school: "",
+    stream: "",
+    exam: "",
+    subject: "",
   };
 
   return (
@@ -40,86 +35,42 @@ export default function EditProfileScreen({ navigation }) {
           newProfile.age = text;
         }}
       />
-      <Text style={styles.text}>Sex (Male/Female):</Text>
+      <Text style={styles.text}>Grade (eg Secondary 1):</Text>
       <TextInput
         style={styles.textInput}
         onChangeText={(text) => {
-          newProfile.sex = text;
+          newProfile.grade = text;
         }}
       />
-      <Text style={styles.text}>Height (in cm):</Text>
+      <Text style={styles.text}>School:</Text>
       <TextInput
         style={styles.textInput}
         keyboardType="numeric"
         onChangeText={(text) => {
-          newProfile.height = text;
+          newProfile.school = text;
         }}
-        maxLength={3}
       />
-      <Text style={styles.text}>Weight (to nearest kg):</Text>
+      <Text style={styles.text}>Stream:</Text>
       <TextInput
         style={styles.textInput}
         keyboardType="numeric"
         onChangeText={(text) => {
-          newProfile.weight = text;
+          newProfile.stream = text;
         }}
-        maxLength={3}
       />
-      <Text style={styles.text}>Date of Birth (DD/MM/YYYY):</Text>
+      <Text style={styles.text}>Next National Exam:</Text>
       <TextInput
         style={styles.textInput}
         onChangeText={(text) => {
-          newProfile.dob = text;
+          newProfile.exam = text;
         }}
-        maxLength={10}
       />
-      <Text style={styles.text}>Blood Type:</Text>
+      <Text style={styles.text}>Subject for Tutoring:</Text>
       <TextInput
         style={styles.textInput}
         onChangeText={(text) => {
-          newProfile.blood = text;
+          newProfile.subject = text;
         }}
-        maxLength={3}
-      />
-      <Text style={styles.text}>Do you Smoke? (Yes/No)</Text>
-      <TextInput
-        style={styles.textInput}
-        onChangeText={(text) => {
-          newProfile.smoke = text;
-        }}
-        maxLength={3}
-      />
-      <Text style={styles.text}>Do you have high cholesterol? (Yes/No)</Text>
-      <TextInput
-        style={styles.textInput}
-        onChangeText={(text) => {
-          newProfile.chol = text;
-        }}
-        maxLength={3}
-      />
-      <Text style={styles.text}>Do you have hypertension? (Yes/No)</Text>
-      <TextInput
-        style={styles.textInput}
-        onChangeText={(text) => {
-          newProfile.hyper = text;
-        }}
-        maxLength={3}
-      />
-      <Text style={styles.text}>Are you overweight? (Yes/No)</Text>
-      <TextInput
-        style={styles.textInput}
-        onChangeText={(text) => {
-          newProfile.fat = text;
-        }}
-        maxLength={3}
-      />
-      <Text style={styles.text}>Have you suffered an injury? (Yes/No)</Text>
-      <TextInput
-        style={styles.textInput}
-        onChangeText={(text) => {
-          newProfile.injury = text;
-        }}
-        maxLength={3}
       />
       <Text></Text>
       <TouchableOpacity

@@ -18,16 +18,11 @@ const db = SQLite.openDatabase("profile.db");
 const SAMPLE_PROFILE = [
   { title: "Name", id: "0", value: "" },
   { title: "Age", id: "1", value: "" },
-  { title: "Sex", id: "2", value: "" },
-  { title: "Height", id: "3", value: "" },
-  { title: "Weight", id: "4", value: "" },
-  { title: "Date of Birth", id: "5", value: "" },
-  { title: "Blood Type", id: "6", value: "" },
-  { title: "Do you smoke?", id: "7", value: "" },
-  { title: "Do you have high cholesterol?", id: "8", value: "" },
-  { title: "Do you have hypertension?", id: "9", value: "" },
-  { title: "Are you overweight?", id: "10", value: "" },
-  { title: "Have you recently suffered an injury?", id: "11", value: "" },
+  { title: "Grade", id: "2", value: "" },
+  { title: "School", id: "3", value: "" },
+  { title: "Stream", id: "4", value: "" },
+  { title: "Next National Exam", id: "5", value: "" },
+  { title: "Subject", id: "6", value: "" },
 ];
 
 function ProfileStackScreen({ route, navigation }) {
@@ -44,16 +39,11 @@ function ProfileStackScreen({ route, navigation }) {
             var tempProfile = SAMPLE_PROFILE;
             tempProfile[0].value = results.rows.item(0).name;
             tempProfile[1].value = results.rows.item(0).age;
-            tempProfile[2].value = results.rows.item(0).sex;
-            tempProfile[3].value = results.rows.item(0).height;
-            tempProfile[4].value = results.rows.item(0).weight;
-            tempProfile[5].value = results.rows.item(0).dob;
-            tempProfile[6].value = results.rows.item(0).bloid;
-            tempProfile[7].value = results.rows.item(0).smoke;
-            tempProfile[8].value = results.rows.item(0).chol;
-            tempProfile[9].value = results.rows.item(0).hyper;
-            tempProfile[10].value = results.rows.item(0).fat;
-            tempProfile[11].value = results.rows.item(0).injury;
+            tempProfile[2].value = results.rows.item(0).grade;
+            tempProfile[3].value = results.rows.item(0).school;
+            tempProfile[4].value = results.rows.item(0).stream;
+            tempProfile[5].value = results.rows.item(0).exam;
+            tempProfile[6].value = results.rows.item(0).subject;
             setProfile(tempProfile);
           }
         },
@@ -71,16 +61,11 @@ function ProfileStackScreen({ route, navigation }) {
         (id INTEGER PRIMARY KEY AUTOINCREMENT,
           name TEXT,
           age TEXT,
-          sex TEXT,
-          height TEXT,
-          weight TEXT,
-          dob TEXT,
-          blood TEXT,
-          smoke TEXT,
-          chol TEXT,
-          hyper TEXT,
-          fat TEXT,
-          injury TEXT);
+          grade TEXT,
+          school TEXT,
+          stream TEXT,
+          exam TEXT,
+          subject TEXT);
           `);
       },
       null,
@@ -97,22 +82,16 @@ function ProfileStackScreen({ route, navigation }) {
             // `UPDATE profile
             // SET name=?, age=?, blood=?, chol=?, dob=?, height=?,
             //     hyper=?, sex=?, smoke=?, weight=?, fat=?, injury=?;`,
-            `INSERT INTO profile (name, age, blood, chol, dob, height, hyper,
-                                  sex, smoke, weight, fat, injury) 
-             VALUES (?,?,?,?,?,?,?,?,?,?,?,?)`,
+            `INSERT INTO profile (name, age, grade, school, stream, exam, subject) 
+             VALUES (?,?,?,?,?,?,?)`,
             [
               route.params.newProfile.name,
               route.params.newProfile.age,
-              route.params.newProfile.blood,
-              route.params.newProfile.chol,
-              route.params.newProfile.dob,
-              route.params.newProfile.height,
-              route.params.newProfile.hyper,
-              route.params.newProfile.sex,
-              route.params.newProfile.smoke,
-              route.params.newProfile.weight,
-              route.params.newProfile.fat,
-              route.params.newProfile.injury,
+              route.params.newProfile.grade,
+              route.params.newProfile.school,
+              route.params.newProfile.stream,
+              route.params.newProfile.exam,
+              route.params.newProfile.subject,
             ]
           );
         },
