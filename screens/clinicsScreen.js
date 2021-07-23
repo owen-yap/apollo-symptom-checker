@@ -15,7 +15,7 @@ const Item = ({ item, onPress, backgroundColor }) => (
       {item.address}
       {"\n"}
     </Text>
-    <Text>Current crowd: {item.crowd}</Text>
+    <Text>Age: {item.crowd}</Text>
   </TouchableOpacity>
 );
 

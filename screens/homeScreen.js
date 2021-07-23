@@ -121,7 +121,7 @@ function HomeScreen({ navigation }) {
         }}
       >
         <Text style={{ textAlign: "center", fontSize: 20, color: "#eb637a" }}>
-          Find Clinics
+          Find Tutors
         </Text>
       </TouchableOpacity>
     </View>
